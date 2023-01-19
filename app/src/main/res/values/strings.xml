@@ -4,7 +4,7 @@
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
+    <string name="next">Log In!</string>
     <string name="previous">Previous</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
@@ -12,4 +12,17 @@
     <string name="manualString">Hello, I am a manually set-up string!</string>
     <string name="myString">Change me!</string>
     <string name="WrongInputText">Wrong Input!</string>
+    <string name="loginTitle">Login Panel</string>
+    <string name="usernameTitle">Name: </string>
+    <string name="passwordTitle">Passwort: </string>
+    <string name="adminStatus">Admin: </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="adminPanelTitle">Admin Panel</string>
+    <string name="sAnlegen">Sachbearbeiter Anlegen</string>
+    <string name="sEditieren">Sachbearbeiter Editieren</string>
+    <string name="sLoeschen">Sachbearbeiter Löschen</string>
+    <string name="fZurodnen">Fortbildung Zuordnen</string>
+    <string name="fZuordnungLoeschen">Fortbildungszuordnung Löschen</string>
+    <string name="sachbearbeiterErfassenTitle">Sachbearbeiter Erfassen</string>
 </resources>

@@ -26,8 +26,19 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
 
+        super.onCreate(savedInstanceState);
+        SachbearbeiterErfassenK sErfassen = new SachbearbeiterErfassenK();
+        sErfassen.erfasseSachbearbeiter("Drew Decker", "screamqueen", false);
+        sErfassen.erfasseSachbearbeiter("Cindy Campbell", "ghostface", true);
+        sErfassen.erfasseSachbearbeiter("Bobby Prinze", "whatsyourfavoritemovie", false);
+        sErfassen.erfasseSachbearbeiter("Brenda Meeks", "thatswhatfriendsarefor", false);
+        sErfassen.erfasseSachbearbeiter("Ray Wilkins", "gottagetoutalive", false);
+        sErfassen.erfasseSachbearbeiter("Shorty Meeks", "shortyisback", false);
+        sErfassen.erfasseSachbearbeiter("Greg Phillipe", "scarymoviesrule", false);
+        sErfassen.erfasseSachbearbeiter("Buffy Gilmore", "slaythehorror", false);
+        sErfassen.erfasseSachbearbeiter("Doofy Gilmore", "doofylaughs", false);
+        sErfassen.erfasseSachbearbeiter("Gail Hailstorm", "gailforcewind", true);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -46,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 v.setText(R.string.manualString);
             }
         });
+
     }
 
     @Override

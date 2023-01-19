@@ -6,15 +6,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.myapplication.databinding.FragmentFirstBinding;
 
-public class FirstFragment extends Fragment {
+public class LoginFragmentAAS extends Fragment {
 
     private FragmentFirstBinding binding;
 
@@ -37,14 +39,29 @@ public class FirstFragment extends Fragment {
             public void onClick(View view2) {
                 //NavHostFragment.findNavController(FirstFragment.this)
                         //.navigate(R.id.action_FirstFragment_to_SecondFragment);
-                EditText et = view.findViewById(R.id.pw2);
+                EditText passwordField = view.findViewById(R.id.passwordField);
+                EditText usernameField = view.findViewById(R.id.userNameField);
+                Switch adminSwitch = view.findViewById(R.id.admin);
+                TextView errorView = view.findViewById(R.id.errorView);
+                LoginK loginK = new LoginK();
+                boolean success = loginK.pruefeLogin(usernameField.getText().toString(), passwordField.getText().toString(),adminSwitch.isChecked());
+                if(success) {
+                    if(adminSwitch.isChecked()) {
+                        NavHostFragment.findNavController(LoginFragmentAAS.this).navigate(R.id.action_FirstFragment_to_adminFragmentAS);
+                    }
+                } else {
+                    errorView.setTextColor(Color.rgb(255,0,0));
+                    errorView.setText(R.string.WrongInputText);
+
+                }
+                /*
                 TextView tv = view.findViewById(R.id.textview_first);
                 if(et.getText().toString().equalsIgnoreCase("pwd")) {
-                    NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_SecondFragment);
+                    NavHostFragment.findNavController(LoginFragmentAAS.this).navigate(R.id.action_FirstFragment_to_SecondFragment);
                 } else {
-                    NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_itemFragment);
+                    tv.setText(R.string.WrongInputText);
                 }
-
+                */
             }
         });
     }
