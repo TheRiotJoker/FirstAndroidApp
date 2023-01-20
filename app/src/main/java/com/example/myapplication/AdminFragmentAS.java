@@ -3,7 +3,9 @@ package com.example.myapplication;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -48,6 +50,7 @@ public class AdminFragmentAS extends Fragment {
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
+        fragment.setHasOptionsMenu(false);
         return fragment;
     }
 
@@ -58,7 +61,6 @@ public class AdminFragmentAS extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
     }
 
     @Override
@@ -66,15 +68,21 @@ public class AdminFragmentAS extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentAdminASBinding.inflate(inflater, container, false);
+        if(getActivity() != null) {
+            if(((AppCompatActivity)getActivity()).getSupportActionBar() != null) {
+                ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Administrator Panel");
+            }
+        }
+
         return binding.getRoot();
     }
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        binding.sAnlegenBtn.setOnClickListener(new View.OnClickListener() {
+        binding.sErfassenBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println("Hello World!");
+                NavHostFragment.findNavController(AdminFragmentAS.this).navigate(R.id.action_adminFragmentAS_to_sachbearbeiterErfassenFragmentAAS);
             }
         });
         binding.sEditierenBtn.setOnClickListener(new View.OnClickListener() {

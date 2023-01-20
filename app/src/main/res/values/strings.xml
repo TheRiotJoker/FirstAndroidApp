@@ -2,7 +2,8 @@
     <string name="app_name">MyApplication</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
+    <string name="first_fragment_label">Login Panel</string>
+    <string name="adminFragmentLabel">Administrator Panel</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Log In!</string>
     <string name="previous">Previous</string>
@@ -19,10 +20,14 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="adminPanelTitle">Admin Panel</string>
-    <string name="sAnlegen">Sachbearbeiter Anlegen</string>
+    <string name="sAnlegen">Sachbearbeiter Erfassen</string>
     <string name="sEditieren">Sachbearbeiter Editieren</string>
     <string name="sLoeschen">Sachbearbeiter Löschen</string>
     <string name="fZurodnen">Fortbildung Zuordnen</string>
     <string name="fZuordnungLoeschen">Fortbildungszuordnung Löschen</string>
     <string name="sachbearbeiterErfassenTitle">Sachbearbeiter Erfassen</string>
+    <string name="nameDefault">Default</string>
+    <string name="passwordDefault">default1</string>
+    <string name="erfassenTitle">Erfassen!</string>
+    <string name="abbruch">Abbruch</string>
 </resources>

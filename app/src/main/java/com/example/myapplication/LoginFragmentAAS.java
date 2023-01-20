@@ -47,6 +47,9 @@ public class LoginFragmentAAS extends Fragment {
                 boolean success = loginK.pruefeLogin(usernameField.getText().toString(), passwordField.getText().toString(),adminSwitch.isChecked());
                 if(success) {
                     if(adminSwitch.isChecked()) {
+                        passwordField.setText("");
+                        usernameField.setText("");
+                        adminSwitch.setChecked(false);
                         NavHostFragment.findNavController(LoginFragmentAAS.this).navigate(R.id.action_FirstFragment_to_adminFragmentAS);
                     }
                 } else {
