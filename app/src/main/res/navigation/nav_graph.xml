@@ -39,6 +39,9 @@
         <action
             android:id="@+id/action_adminFragmentAS_to_sachbearbeiterEditierenFragmentAAS"
             app:destination="@id/sachbearbeiterEditierenFragmentAAS" />
+        <action
+            android:id="@+id/action_adminFragmentAS_to_sachbearbeiterLoeschenFragmentAAS"
+            app:destination="@id/sachbearbeiterLoeschenFragmentAAS" />
     </fragment>
     <fragment
         android:id="@+id/sachbearbeiterErfassenFragmentAAS"
@@ -56,6 +59,15 @@
         tools:layout="@layout/fragment_sachbearbeiter_editieren_a_a_s" >
         <action
             android:id="@+id/action_sachbearbeiterEditierenFragmentAAS_to_adminFragmentAS"
+            app:destination="@id/adminFragmentAS" />
+    </fragment>
+    <fragment
+        android:id="@+id/sachbearbeiterLoeschenFragmentAAS"
+        android:name="com.example.myapplication.SachbearbeiterLoeschenFragmentAAS"
+        android:label="fragment_sachbearbeiter_loeschen_a_a_s"
+        tools:layout="@layout/fragment_sachbearbeiter_loeschen_a_a_s" >
+        <action
+            android:id="@+id/action_sachbearbeiterLoeschenFragmentAAS_to_adminFragmentAS"
             app:destination="@id/adminFragmentAS" />
     </fragment>
 </navigation>

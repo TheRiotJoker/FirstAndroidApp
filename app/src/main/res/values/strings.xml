@@ -35,4 +35,6 @@
     <string name="sEditierenAdminstatusTitle">Neuer Adminstatus</string>
     <string name="sEditierenSpinnerTitle">Sachbearbeiter: </string>
     <string name="sEditierenButtonTitle">Editieren!</string>
+    <string name="sachbearbeiterTitle">Sachbearbeiter:</string>
+    <string name="sLoeschenBtnTitle">Löschen!</string>
 </resources>

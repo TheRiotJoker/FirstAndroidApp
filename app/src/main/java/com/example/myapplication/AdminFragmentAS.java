@@ -94,7 +94,7 @@ public class AdminFragmentAS extends Fragment {
         binding.sLoeschenBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println("Hello World!");
+                NavHostFragment.findNavController(AdminFragmentAS.this).navigate(R.id.action_adminFragmentAS_to_sachbearbeiterLoeschenFragmentAAS);
             }
         });binding.fZuordnenBtn.setOnClickListener(new View.OnClickListener() {
             @Override
