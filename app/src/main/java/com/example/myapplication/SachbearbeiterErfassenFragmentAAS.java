@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
@@ -79,12 +80,16 @@ public class SachbearbeiterErfassenFragmentAAS extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        if(((AppCompatActivity)getActivity()) != null) {
+            if(((AppCompatActivity)getActivity()).getSupportActionBar() != null) {
+                ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.sachbearbeiterErfassenTitle);
+            }
+        }
         EditText userNameView = binding.nameErfassenInput;
         EditText passwordView = binding.passwortErfassenInput;
         Switch adminCheck = binding.adminErfassen;
         TextView errorView = binding.erfassenErrorTextView;
         binding.erfassenBtn.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
                 SachbearbeiterErfassenK seK = new SachbearbeiterErfassenK();

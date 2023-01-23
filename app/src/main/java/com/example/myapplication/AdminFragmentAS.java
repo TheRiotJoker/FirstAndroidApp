@@ -88,7 +88,7 @@ public class AdminFragmentAS extends Fragment {
         binding.sEditierenBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println("Hello World!");
+                NavHostFragment.findNavController(AdminFragmentAS.this).navigate(R.id.action_adminFragmentAS_to_sachbearbeiterEditierenFragmentAAS);
             }
         });
         binding.sLoeschenBtn.setOnClickListener(new View.OnClickListener() {

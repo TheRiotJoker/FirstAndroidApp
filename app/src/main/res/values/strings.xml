@@ -30,4 +30,9 @@
     <string name="passwordDefault">default1</string>
     <string name="erfassenTitle">Erfassen!</string>
     <string name="abbruch">Abbruch</string>
+    <string name="sEditierenNameTitle">Neuer Name</string>
+    <string name="sEditierenPasswordTitle">Neues Passwort</string>
+    <string name="sEditierenAdminstatusTitle">Neuer Adminstatus</string>
+    <string name="sEditierenSpinnerTitle">Sachbearbeiter: </string>
+    <string name="sEditierenButtonTitle">Editieren!</string>
 </resources>
